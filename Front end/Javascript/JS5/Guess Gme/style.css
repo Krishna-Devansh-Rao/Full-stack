@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #653434 0%,
+            #111 45%,
+            #1b1b1b 100%
+        );
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.game-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   GAME CARD
+========================= */
+
+.game-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 45px;
+
+    background: rgba(25, 25, 25, 0.95);
+
+    border: 1px solid #333;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    background: #222;
+
+    border: 1px solid #3a3a3a;
+
+    font-size: 35px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 12px;
+}
+
+
+.subtitle {
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+
+    background: #333;
+
+    margin: 30px 0;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.info-box {
+    padding: 18px;
+
+    background: #202020;
+
+    border: 1px solid #303030;
+
+    border-radius: 12px;
+}
+
+.label {
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+
+    margin-bottom: 7px;
+}
+
+.value {
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+
+.instructions {
+    text-align: left;
+
+    margin-bottom: 30px;
+}
+
+.instructions h2 {
+    font-size: 18px;
+
+    margin-bottom: 18px;
+}
+
+.instruction {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.instruction:last-child {
+    border-bottom: none;
+}
+
+.instruction span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    background: #292929;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.instruction p {
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+.instruction strong {
+    color: white;
+}
+
+
+/* =========================
+   START BUTTON
+========================= */
+
+.start-btn {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: black;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: all 0.25s ease;
+}
+
+.start-btn span {
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(255, 255, 255, 0.12);
+}
+
+.start-btn:hover span {
+    transform: translateX(4px);
+}
+
+.start-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-text {
+    margin-top: 22px;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .game-container {
+        padding: 20px;
+    }
+
+    .game-card {
+        padding: 30px 22px;
+
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.number-display {
+    margin: 25px 0;
+    padding: 20px;
+
+    background: #202020;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.number-display p {
+    color: #777;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.number-display h2 {
+    margin-top: 8px;
+    font-size: 42px;
+}

@@ -1,0 +1,48 @@
+Javascript uses 
+
+REPL -> Read - evaluate - print - Loop
+
+clear -> cmd + k ;
+
+//Variable
+a = 5;
+b = 6;
+
+//Data types 
+num 
+bool
+string
+undefined
+null
+Bignt
+symbol
+
+//operator
++,-,*,/,%
+
+//operator Precedence
+() , ** , * , / , % , + , -
+
+//Let keyword
+let num = 2;  //tho 2 ka jo num as var hogaya hai ;
+
+//const keyword
+const yr = 2025; //yeh fixed hogaya and change nahi ho skata 
+
+//Console.log()
+Console.log("This is used to print any statement like Hello World");
+
+If/else
+
+
+#String Method
+
+Actions that can be performed on objects
+
+format - stringname.method()
+
+#Trim method in string
+
+
+
+
