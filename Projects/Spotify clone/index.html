@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="header-left">
+
+        <i class="fa-brands fa-spotify spotify-logo"></i>
+
+        <div class="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="search-bar">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="What do you want to play?">
+
+            <i class="fa-solid fa-box archive"></i>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <a href="#">Premium</a>
+
+        <a href="#">Support</a>
+
+        <a href="#">Download</a>
+
+        <span>|</span>
+
+        <a href="#">
+            <i class="fa-regular fa-circle-down"></i>
+            Install App
+        </a>
+
+        <a href="#">Sign up</a>
+
+        <button>Log in</button>
+
+    </div>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+
+<div class="main">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="nav">
+
+<div class="nav-options">
+<i class="fa-solid fa-house"></i>
+<a href="#">Home</a>
+</div>
+
+<div class="nav-options">
+<i class="fa-solid fa-magnifying-glass"></i>
+<a href="#">Search</a>
+</div>
+
+</div>
+
+<!-- ================= LIBRARY ================= -->
+
+<div class="library">
+
+<div class="library-header">
+
+<div class="library-title">
+
+<img src="./Project/assets/library_icon.png">
+
+<span>Your Library</span>
+
+</div>
+
+<div class="library-icons">
+
+<i class="fa-solid fa-plus"></i>
+
+</div>
+
+</div>
+
+<!-- Card 1 -->
+
+<div class="library-card">
+
+<h3>Create your first playlist</h3>
+
+<p>It's easy, we'll help you.</p>
+
+<button>Create playlist</button>
+
+</div>
+
+<!-- Card 2 -->
+
+<div class="library-card">
+
+<h3>Let's find some podcasts to follow</h3>
+
+<p>We'll keep you updated on new episodes.</p>
+
+<button>Browse podcasts</button>
+
+</div>
+
+<!-- Footer -->
+
+<div class="library-footer">
+
+<a href="#">Legal</a>
+
+<a href="#">Safety & Privacy Center</a>
+
+<a href="#">Privacy Policy</a>
+
+<a href="#">Cookies</a>
+
+<a href="#">About Ads</a>
+
+<a href="#">Accessibility</a>
+
+<a href="#">Cookies</a>
+
+</div>
+
+<button class="language-btn">
+
+<i class="fa-solid fa-globe"></i>
+
+English
+
+</button>
+
+</div>
+
+</aside>
+
+<!-- ================= MAIN CONTENT START ================= -->
+
+<main class="main-content">
+
+    <!-- ================= TRENDING SONGS ================= -->
+
+<section class="music-section">
+
+    <div class="section-title">
+
+        <h2>Trending songs</h2>
+
+        <a href="#">Show all</a>
+
+    </div>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <img src="Songs img/thw winner.png" alt="">
+            <h3>The winner take it all</h3>
+            <p>ABBA</p>
+        </div>
+
+        <div class="card">
+            <img src="Songs img/paisa.png" alt="">
+            <h3>Paisa</h3>
+            <p> </p>
+        </div>
+
+        <div class="card">
+            <img src="Songs img/Millionaire.png" alt="">
+            <h3>Millionaire</h3>
+            <p>Honey Singh</p>
+        </div>
+
+        <div class="card">
+            <img src="Songs img/Harshad mehta .png" alt="">
+            <h3>Scam 1992 Theme song</h3>
+            <p></p>
+        </div>
+
+        <div class="card">
+            <img src="Songs img/3-59am.png" alt="">
+            <h3>3:59 am</h3>
+            <p>Divine</p>
+        </div>
+
+        <div class="card">
+            <img src="Songs img/sia .png" alt="">
+            <h3>Unstoppable</h3>
+            <p>Sia</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= POPULAR ARTISTS ================= -->
+
+<section class="music-section">
+
+    <div class="section-title">
+
+        <h2>Popular artists</h2>
+
+        <a href="#">Show all</a>
+
+    </div>
+
+    <div class="cards-container">
+
+        <div class="artist-card">
+            <img src="Songs img/honey.png" alt="">
+            <h3>Honey Singh</h3>
+            <p>Artist</p>
+        </div>
+
+        <div class="artist-card">
+            <img src="Songs img/divine.png" alt="">
+            <h3>Divine</h3>
+            <p>Artist</p>
+        </div>
+
+        <div class="artist-card">
+            <img src="Songs img/arijit.png" alt="">
+            <h3>Arijit Singh</h3>
+            <p>Artist</p>
+        </div>
+
+        <div class="artist-card">
+            <img src="Songs img/siaa.png" alt="">
+            <h3>Sia</h3>
+            <p>Artist</p>
+        </div>
+
+        <div class="artist-card">
+            <img src="Songs img/shreya.png" alt="">
+            <h3>Shreya ghoshal</h3>
+            <p>Artist</p>
+        </div>
+
+        <div class="artist-card">
+            <img src="Songs img/Athif alam.png" alt="">
+            <h3>Atif Aslam</h3>
+            <p>Artist</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- ================= MUSIC PLAYER ================= -->
+
+<footer class="music-player">
+
+    <div class="player-left">
+
+        <img src="./Project/assets/card1img.jpeg" alt="">
+
+        <div class="song-info">
+
+            <h4>Barsaat</h4>
+
+            <p>Banjaare, Roni</p>
+
+        </div>
+
+    </div>
+
+    <div class="player-center">
+
+        <i class="fa-solid fa-backward-step"></i>
+
+        <i class="fa-solid fa-circle-play play-icon"></i>
+
+        <i class="fa-solid fa-forward-step"></i>
+
+    </div>
+
+    <div class="player-right">
+
+        <i class="fa-solid fa-volume-high"></i>
+
+    </div>
+
+</footer>
+<!-- ================= MUSIC PLAYER ================= -->
+
+<footer class="music-player">
+
+    <!-- LEFT -->
+
+    <div class="player-left">
+
+        <img src="Songs img/thw winner.png" alt="">
+
+        <div class="song-info">
+
+            <h4>The Winner takes it all</h4>
+
+            <p>ABBA</p>
+
+        </div>
+
+        <i class="fa-regular fa-heart"></i>
+
+    </div>
+
+    <!-- CENTER -->
+
+    <div class="player-center">
+
+        <div class="player-controls">
+
+            <i class="fa-solid fa-shuffle"></i>
+
+            <i class="fa-solid fa-backward-step"></i>
+
+            <i class="fa-solid fa-circle-play play-btn-main"></i>
+
+            <i class="fa-solid fa-forward-step"></i>
+
+            <i class="fa-solid fa-repeat"></i>
+
+        </div>
+
+        <div class="playback-bar">
+
+            <span class="curr-time">0:00</span>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="progress-bar">
+
+            <span class="total-time">3:45</span>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="player-right">
+
+        <i class="fa-solid fa-microphone"></i>
+
+        <i class="fa-solid fa-list-ul"></i>
+
+        <i class="fa-solid fa-desktop"></i>
+
+        <i class="fa-solid fa-volume-high"></i>
+
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="70"
+            class="volume-slider">
+
+        <i class="fa-solid fa-expand"></i>
+
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,1124 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    height:64px;
+
+    background:#000;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:8px 18px;
+
+}
+
+/* =====================================
+   HEADER LEFT
+===================================== */
+
+.header-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+/* Spotify Logo */
+
+.spotify-logo{
+
+    font-size:34px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* =====================================
+   HOME BUTTON
+===================================== */
+
+.home-btn{
+
+    width:48px;
+
+    height:48px;
+
+    background:#1f1f1f;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.home-btn:hover{
+
+    background:#2a2a2a;
+
+}
+
+.home-btn i{
+
+    font-size:20px;
+
+}
+
+/* =====================================
+   SEARCH BAR
+===================================== */
+
+.search-bar{
+
+    width:470px;
+
+    height:48px;
+
+    background:#242424;
+
+    border-radius:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    transition:.3s;
+
+}
+
+.search-bar:hover{
+
+    background:#2d2d2d;
+
+}
+
+.search-bar i{
+
+    color:#b3b3b3;
+
+    font-size:18px;
+
+}
+
+.search-bar input{
+
+    flex:1;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+    margin-left:15px;
+
+}
+
+.search-bar input::placeholder{
+
+    color:#b3b3b3;
+
+}
+
+.archive{
+
+    margin-left:15px;
+
+    border-left:1px solid #666;
+
+    padding-left:15px;
+
+}
+
+/* =====================================
+   HEADER RIGHT
+===================================== */
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:24px;
+
+}
+
+.header-right a{
+
+    text-decoration:none;
+
+    color:#b3b3b3;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+.header-right a:hover{
+
+    color:white;
+
+    transform:scale(1.03);
+
+}
+
+.header-right span{
+
+    color:#777;
+
+}
+
+.header-right button{
+
+    border:none;
+
+    background:white;
+
+    color:black;
+
+    font-weight:700;
+
+    font-size:16px;
+
+    padding:15px 32px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.header-right button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* ==========================
+   MAIN LAYOUT
+========================== */
+
+.main{
+    display:flex;
+    height:calc(100vh - 72px);
+}
+
+.sidebar{
+    width:340px;
+    padding:8px;
+    background:#000;
+}
+
+.main-content{
+    flex:1;
+    background:#121212;
+    border-radius:12px;
+    margin:8px 8px 0 0;
+    padding:24px;
+    overflow-y:auto;
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+.main-content::-webkit-scrollbar{
+    width:10px;
+}
+
+.main-content::-webkit-scrollbar-thumb{
+    background:#535353;
+    border-radius:10px;
+}
+
+/* ==========================
+   NAV
+========================== */
+
+.nav{
+    background:#121212;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:8px;
+}
+
+.nav-options{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:12px 0;
+    opacity:.7;
+    transition:.2s;
+}
+
+.nav-options:hover{
+    opacity:1;
+}
+
+.nav-options i{
+    font-size:22px;
+}
+
+.nav-options a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:700;
+}
+
+/* ==========================
+   LIBRARY
+========================== */
+
+.library{
+    background:#121212;
+    border-radius:12px;
+    padding:16px;
+    height:calc(100vh - 170px);
+    display:flex;
+    flex-direction:column;
+}
+
+.library-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.library-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.library-title img{
+    width:22px;
+    height:22px;
+}
+
+.library-title span{
+    font-size:16px;
+    font-weight:700;
+}
+
+.library-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.library-icons i{
+    color:#b3b3b3;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.library-icons i:hover{
+    color:#fff;
+}
+
+/* ==========================
+   LIBRARY CARDS
+========================== */
+
+.library-card{
+    background:#242424;
+    border-radius:10px;
+    padding:18px;
+    margin-bottom:18px;
+}
+
+.library-card h3{
+    font-size:16px;
+    margin-bottom:10px;
+}
+
+.library-card p{
+    color:#b3b3b3;
+    font-size:14px;
+    margin-bottom:18px;
+    line-height:1.5;
+}
+
+.library-card button{
+    border:none;
+    background:#fff;
+    color:#000;
+    padding:10px 18px;
+    border-radius:999px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.library-card button:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================
+   FOOTER LINKS
+========================== */
+
+.library-footer{
+    margin-top:auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.library-footer a{
+    color:#b3b3b3;
+    text-decoration:none;
+    font-size:11px;
+}
+
+.library-footer a:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+
+/* ==========================
+   LANGUAGE BUTTON
+========================== */
+
+.language-btn{
+    margin-top:24px;
+    width:120px;
+    height:36px;
+    border:1px solid #727272;
+    background:transparent;
+    color:#fff;
+    border-radius:999px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.2s;
+}
+
+.language-btn:hover{
+    border-color:#fff;
+    transform:scale(1.03);
+}
+
+/* ==========================
+   MUSIC PLAYER
+========================== */
+
+.music-player{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:72px;
+    background:#181818;
+    border-top:1px solid #282828;
+}
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content{
+    flex:1;
+    background:#121212;
+    border-radius:12px;
+    margin:8px 8px 0 0;
+    overflow-y:auto;
+    padding:0 24px 24px;
+}
+
+/* ==========================================
+   STICKY NAV
+========================================== */
+
+.sticky-nav{
+    position:sticky;
+    top:0;
+    z-index:10;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#121212;
+
+    padding:16px 0;
+}
+
+.sticky-nav-icons{
+    display:flex;
+    gap:12px;
+}
+
+.sticky-nav-icons img{
+    width:32px;
+    height:32px;
+    cursor:pointer;
+}
+
+.sticky-nav-options{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.dark-badge{
+    background:#000;
+    color:#fff;
+}
+
+.nav-item{
+    margin-right:16px;
+}
+
+@media(max-width:1000px){
+
+    .hide{
+        display:none;
+    }
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+.music-section{
+
+    margin-top:30px;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.section-title a{
+
+    color:#b3b3b3;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.section-title a:hover{
+
+    text-decoration:underline;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   CARD CONTAINER
+========================================== */
+
+.cards-container{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    padding-bottom:10px;
+
+}
+
+.cards-container::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ==========================================
+   SONG CARD
+========================================== */
+
+.card{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    background:#242424;
+
+}
+
+.card{
+    width:180px;
+    padding:12px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.card:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.card h3{
+
+    font-size:16px;
+
+    margin-bottom:8px;
+
+    color:#fff;
+
+}
+
+.card p{
+
+    color:#b3b3b3;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+/* ==========================================
+   PLAY BUTTON
+========================================== */
+
+.image-box{
+
+    position:relative;
+
+}
+
+.play-btn{
+
+    position:absolute;
+
+    right:10px;
+
+    bottom:10px;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#1DB954;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transform:translateY(10px);
+
+    transition:.3s;
+
+}
+
+.play-btn i{
+
+    color:#000;
+
+    font-size:18px;
+
+}
+
+.card:hover .play-btn{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   ARTIST CARD
+========================================== */
+
+.artist-card{
+
+    width:180px;
+
+    flex-shrink:0;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.artist-card:hover{
+
+    background:#242424;
+
+}
+
+.artist-card img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:14px;
+
+    transition:.3s;
+
+}
+
+.artist-card:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.artist-card h3{
+
+    font-size:16px;
+
+    margin-bottom:6px;
+
+}
+
+.artist-card p{
+
+    color:#b3b3b3;
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .card,
+    .artist-card{
+
+        width:160px;
+
+    }
+
+    .section-title h2{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ==========================================
+   MUSIC PLAYER
+========================================== */
+
+.music-player{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:72px;
+    background:#181818;
+    border-top:1px solid #282828;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 18px;
+
+    z-index:100;
+}
+
+/* ==========================================
+   PLAYER LEFT
+========================================== */
+
+.player-left{
+    width:25%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.player-left img{
+    width:56px;
+    height:56px;
+    border-radius:6px;
+}
+
+.song-info h4{
+    font-size:14px;
+    margin-bottom:4px;
+}
+
+.song-info p{
+    font-size:12px;
+    color:#b3b3b3;
+}
+
+.song-info h4:hover,
+.song-info p:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+/* ==========================================
+   PLAYER CENTER
+========================================== */
+
+.player-center{
+    width:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.player-controls{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin-bottom:8px;
+}
+
+.player-controls i{
+    color:#b3b3b3;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.player-controls i:hover{
+    color:#fff;
+}
+
+.play-btn-main{
+    font-size:34px;
+    color:#fff !important;
+}
+
+.play-btn-main:hover{
+    transform:scale(1.08);
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.playback-bar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:100%;
+}
+
+.curr-time,
+.total-time{
+    font-size:12px;
+    color:#b3b3b3;
+}
+
+.progress-bar{
+    flex:1;
+    appearance:none;
+    background:transparent;
+    cursor:pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    height:4px;
+    background:#4d4d4d;
+    border-radius:100px;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance:none;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#fff;
+    margin-top:-4px;
+}
+
+/* ==========================================
+   PLAYER RIGHT
+========================================== */
+
+.player-right{
+
+    width:25%;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    gap:14px;
+}
+
+.player-right i{
+    color:#b3b3b3;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.player-right i:hover{
+    color:#fff;
+}
+
+.volume-slider{
+    width:100px;
+    appearance:none;
+    background:transparent;
+}
+
+.volume-slider::-webkit-slider-runnable-track{
+    height:4px;
+    background:#4d4d4d;
+    border-radius:100px;
+}
+
+.volume-slider::-webkit-slider-thumb{
+    appearance:none;
+    width:12px;
+    height:12px;
+    background:#fff;
+    border-radius:50%;
+    margin-top:-4px;
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+button{
+    transition:.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+img{
+    transition:.3s;
+}
+
+.card:hover img,
+.artist-card:hover img{
+    transform:scale(1.03);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#555;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#121212;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .sidebar{
+        width:300px;
+    }
+
+    .player-right{
+        display:none;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .player-left{
+        width:35%;
+    }
+
+    .player-center{
+        width:65%;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .player-left{
+        display:none;
+    }
+
+    .player-center{
+        width:100%;
+    }
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.card,
+.artist-card,
+.library-card{
+    transition:.3s;
+}
+
+.card:hover,
+.artist-card:hover,
+.library-card:hover{
+    background:#2a2a2a;
+}
+
+/* ==========================================
+   FINAL POLISH
+========================================== */
+
+a{
+    transition:.2s;
+}
+
+a:hover{
+    color:#fff;
+}
+
+.library-icons i:hover{
+    transform:scale(1.15);
+}
+
+.badge:hover,
+.library-card button:hover{
+    transform:scale(1.05);
+}
+
+.section-title h2:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
