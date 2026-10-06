@@ -1,0 +1,7 @@
+Process: The obj provides the info about and control over the current node.js Process
+
+Process.argv: return an array containing the cmd line arg passed when node.js process was launched 
+
+Argument mlb input hota hai 
+
+
