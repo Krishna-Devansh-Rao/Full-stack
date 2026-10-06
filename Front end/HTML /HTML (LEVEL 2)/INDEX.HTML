@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Concepts Demo</title>
+</head>
+<body>
+
+    <!-- Semantic Markup Starts -->
+
+    <header>
+        <h1>Welcome to My HTML Demo</h1>
+        <hr>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <!-- SECTION -->
+        <section>
+
+            <h2>1. DIV Element (Block Element)</h2>
+
+            <div style="border:2px solid blue; padding:10px;">
+                <h3>About Me</h3>
+                <p>
+                    My name is
+                    <span style="color:red; font-weight:bold;">Krishna Devansh Rao</span>.
+                    <!-- Span is an Inline Element -->
+                </p>
+            </div>
+
+            <hr>
+
+            <h2>2. Inline vs Block</h2>
+
+            <p>This is a Block Element (Paragraph)</p>
+
+            <span style="background-color:yellow;">HTML</span>
+            <span style="background-color:lightgreen;">CSS</span>
+            <span style="background-color:lightblue;">JavaScript</span>
+
+            <p>
+                Notice that all the <strong>span</strong> elements stay on the
+                same line.
+            </p>
+
+            <hr>
+
+            <h2>3. Superscript & Subscript</h2>
+
+            <p>x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+
+            <p>Water Formula = H<sub>2</sub>O</p>
+
+            <hr>
+
+            <h2>4. HTML Entities</h2>
+
+            <p>&lt;h1&gt;Hello World&lt;/h1&gt;</p>
+
+            <p>5 &gt; 3</p>
+
+            <p>Tom &amp; Jerry</p>
+
+            <p>&copy; 2026 My Website</p>
+
+            <p>Price: &dollar;100</p>
+
+            <hr>
+
+        </section>
+
+        <!-- ARTICLE -->
+
+        <article>
+
+            <h2>Latest Article</h2>
+
+            <p>
+                Semantic HTML makes webpages easier to understand for
+                developers and search engines.
+            </p>
+
+        </article>
+
+        <!-- ASIDE -->
+
+        <aside>
+
+            <h3>Quick Tip</h3>
+
+            <p>
+                Use Emmet in VS Code to write HTML faster.
+            </p>
+
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+        <p>&copy; 2026 HTML Learning Demo</p>
+
+    </footer>
+
+    <!--
+        Emmet Shortcuts Used to Create Similar Code
+
+        !
+        header>h1
+        nav>a*3
+        section
+        article
+        aside
+        footer
+        div
+        span
+        hr
+    -->
+
+</body>
+</html>

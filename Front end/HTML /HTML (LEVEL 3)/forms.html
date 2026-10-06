@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Elements</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Text Input -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br><br>
+
+        <!-- Select -->
+        <label for="city">Select City:</label><br>
+        <select id="city">
+            <option>Raipur</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Bangalore</option>
+        </select>
+        <br><br>
+
+        <!-- Range -->
+        <label for="skill">Programming Skill:</label><br>
+        Beginner
+        <input
+            type="range"
+            id="skill"
+            min="0"
+            max="100"
+            value="50">
+        Expert
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label>Gender:</label><br>
+
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender">
+        <label for="other">Other</label>
+
+        <br><br>
+
+        <!-- Checkboxes -->
+        <label>Skills:</label><br>
+
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js">
+        <label for="js">JavaScript</label>
+
+        <br><br>
+
+        <!-- Textarea -->
+        <label for="message">Message:</label><br>
+
+        <textarea
+            id="message"
+            rows="5"
+            cols="30"
+            placeholder="Write your message here...">
+        </textarea>
+
+        <br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+
+        <button type="reset">Reset</button>
+
+        <button type="button">Click Me</button>
+
+    </form>
+
+</body>
+</html>

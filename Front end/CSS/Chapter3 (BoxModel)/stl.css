@@ -1,0 +1,46 @@
+.Trafic_signal{
+    height:220px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    margin-left: 150px;
+}
+
+/* .border{
+    height: 184px;
+    width: 8px;
+    background-color: rgb(238, 238, 238);
+    border: 3px solid black;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 56px;
+    display: flex; 
+    } */
+    
+    
+    .ele{
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+        background-color: rgb(238, 238, 238);
+        border: 3px solid black;
+        /* margin-top: 5px; */
+        /* position: left; */
+        align-items: left;
+        justify-content: flex-start;
+        /* display: flex; */
+        padding-left: 2px;
+        margin-left: 14px;
+        margin-top: 5px;
+    }
+    
+
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#yellow{
+    background-color: yellow;
+}

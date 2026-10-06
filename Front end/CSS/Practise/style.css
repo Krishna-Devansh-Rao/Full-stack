@@ -1,0 +1,67 @@
+*{
+    background-color: rgb(254, 249, 243);
+    font-family: 'Courier New';
+}
+
+#Qu{ 
+    color: #b92b27;
+
+
+}
+
+h3{
+    color: #b92b27;
+}
+
+
+#upvote{
+    background-color: greenyellow;
+
+
+}
+
+#login{
+    background-color: white;
+}
+#login:hover{
+
+    background-color: black;
+    color: white;
+    font-weight: 900;
+}
+
+#signup{
+    background-color: #b92b27;
+    color: white;
+    font-weight: 900;
+}
+
+.upvote{
+    background-color: greenyellow;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+p a {
+    color: purple;
+    background-color: yellow;
+}
+
+.answer:hover{
+    background-color: black;
+    color: white;
+    font-weight: 900;
+
+}
+.upvote:hover{
+    background-color: black;
+    color: white;
+    font-weight: 900;
+
+}
+
+
+#Qu::first-letter{
+    color: green;
+}
+

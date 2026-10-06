@@ -1,0 +1,24 @@
+.container{
+    width: 600px;
+    height: 300px;
+    background-color: navajowhite;
+    /* display: flex; */
+    display: grid;
+    grid-template-rows: 60px 60px 60px  ;
+    grid-template-columns: 100px 100px ;
+    
+}
+
+.item{
+    height: 50px;
+    width: 100px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: column;
+    margin-top: 50%; */
+    
+}

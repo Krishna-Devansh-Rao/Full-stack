@@ -1,0 +1,253 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* ===========================
+   Background
+=========================== */
+
+.main_box{
+    background:url("photo.jpg");
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+}
+
+/* ===========================
+   Open Button
+=========================== */
+
+.btn_one i{
+    color:white;
+    font-size:28px;
+    position:absolute;
+    left:20px;
+    top:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn_one i:hover{
+    transform:scale(1.15);
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+
+.sidebar_menu{
+
+    position:fixed;
+
+    left:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:rgba(30,30,30,.55);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:3px 0 15px rgba(0,0,0,.5);
+
+    transition:.4s;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    height:70px;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.logo a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:20px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Close Button
+=========================== */
+
+.btn_two i{
+
+    color:white;
+
+    position:absolute;
+
+    top:22px;
+
+    right:20px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn_two i:hover{
+
+    transform:rotate(180deg);
+
+    color:red;
+
+}
+
+/* ===========================
+   Menu
+=========================== */
+
+.menu{
+
+    margin-top:15px;
+
+}
+
+.menu ul{
+
+    list-style:none;
+
+}
+
+.menu li{
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+}
+
+.menu li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    display:inline-block;
+
+    padding:18px 0;
+
+    font-size:18px;
+
+}
+
+.menu li i{
+
+    color:white;
+
+    width:35px;
+
+    margin-left:20px;
+
+    font-size:18px;
+
+}
+
+.menu li:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.menu li:hover a{
+
+    color:#00d4ff;
+
+}
+
+.menu li:hover i{
+
+    color:#00d4ff;
+
+}
+
+/* ===========================
+   Social Icons
+=========================== */
+
+.social_media{
+
+    position:absolute;
+
+    bottom:30px;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.social_media a{
+
+    color:white;
+
+    margin:0 10px;
+
+    font-size:22px;
+
+    opacity:.6;
+
+    transition:.3s;
+
+}
+
+.social_media a:hover{
+
+    opacity:1;
+
+    color:#00d4ff;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   Checkbox
+=========================== */
+
+#check{
+
+    display:none;
+
+}
+
+#check:checked ~ .sidebar_menu{
+
+    left:0;
+
+}
+
+#check:checked ~ .btn_one{
+
+    display:none;
+
+}
