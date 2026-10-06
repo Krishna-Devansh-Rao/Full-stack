@@ -1,0 +1,758 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------- PAGE ---------------------*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 18% 12%,
+            rgba(150, 45, 255, 0.35),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(0, 190, 255, 0.25),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(70, 40, 180, 0.08),
+            transparent 45%
+        ),
+        #03040b;
+
+    color: #ffffff;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* --------------------- BG ---------------------*/
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    top: -180px;
+    left: -100px;
+
+    background: radial-gradient(
+        circle,
+        rgba(180, 55, 255, 0.55),
+        rgba(120, 30, 255, 0.2) 35%,
+        transparent 70%
+    );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    bottom: -220px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 210, 255, 0.4),
+        rgba(0, 100, 255, 0.15) 35%,
+        transparent 70%
+    );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CALCULATOR
+======================================== */
+
+.calculator {
+    position: relative;
+
+    width: 560px;
+    max-width: calc(100vw - 40px);
+
+    padding: 8px;
+
+    border-radius: 42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.035)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.65),
+        0 0 35px rgba(80, 70, 255, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+/* subtle blue/purple glow around calculator */
+
+.calculator::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(190, 70, 255, 0.25),
+            transparent 25%,
+            transparent 70%,
+            rgba(0, 190, 255, 0.2)
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.calculator-header {
+    position: relative;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 2;
+}
+
+
+.window-controls {
+    position: absolute;
+
+    left: 22px;
+
+    display: flex;
+    gap: 10px;
+}
+
+
+.control {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 10px rgba(150, 100, 255, 0.3),
+        inset 0 1px 2px rgba(255, 255, 255, 0.35);
+}
+
+
+.control.purple {
+    background: linear-gradient(
+        135deg,
+        #c36cff,
+        #713cff
+    );
+}
+
+
+.control.pink {
+    background: linear-gradient(
+        135deg,
+        #ff75d8,
+        #c43cff
+    );
+}
+
+
+.control.blue {
+    background: linear-gradient(
+        135deg,
+        #73a8ff,
+        #315cff
+    );
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.calculator-title {
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    color: rgba(235, 235, 255, 0.75);
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu-button {
+    position: absolute;
+
+    right: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.menu-button:hover {
+    color: #ffffff;
+
+    transform: scale(1.1);
+}
+
+
+/* ========================================
+   DISPLAY
+======================================== */
+
+.display {
+    position: relative;
+
+    margin: 18px 28px 20px;
+
+    min-height: 170px;
+
+    padding: 25px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 15, 35, 0.7),
+            rgba(5, 7, 20, 0.45)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.08),
+        inset 0 -10px 30px rgba(0, 0, 0, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+
+/* blue glow inside display */
+
+.display::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 60px;
+
+    left: 50%;
+    bottom: -25px;
+
+    transform: translateX(-50%);
+
+    background: rgba(65, 70, 255, 0.55);
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   EXPRESSION
+======================================== */
+
+.expression {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    text-align: right;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: rgba(220, 220, 240, 0.65);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   RESULT
+======================================== */
+
+.result {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    text-align: right;
+
+    font-size: clamp(42px, 7vw, 64px);
+
+    font-weight: 300;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.12);
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   BUTTON GRID
+======================================== */
+
+.buttons {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    grid-template-rows:
+        repeat(5, 1fr);
+
+    gap: 14px;
+
+    padding: 0 28px 28px;
+}
+
+
+/* ========================================
+   ALL BUTTONS
+======================================== */
+
+.button {
+    position: relative;
+
+    height: 76px;
+
+    border-radius: 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35, 42, 70, 0.78),
+            rgba(12, 17, 35, 0.78)
+        );
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.1),
+        0 8px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+
+/* ========================================
+   BUTTON HIGHLIGHT
+======================================== */
+
+.button::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   BUTTON HOVER
+======================================== */
+
+.button:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.14),
+        0 10px 25px rgba(0, 0, 0, 0.35),
+        0 0 15px rgba(90, 100, 255, 0.12);
+}
+
+
+/* ========================================
+   BUTTON ACTIVE
+======================================== */
+
+.button:active {
+    transform: translateY(2px) scale(0.97);
+
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ========================================
+   UTILITY BUTTONS
+======================================== */
+
+.utility {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(90, 100, 140, 0.75),
+            rgba(38, 45, 75, 0.75)
+        );
+
+    color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* ========================================
+   OPERATOR BUTTONS
+======================================== */
+
+.operator {
+    background:
+        linear-gradient(
+            145deg,
+            #d044ff,
+            #673cff 55%,
+            #264cff
+        );
+
+    border-color: rgba(185, 130, 255, 0.65);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.25),
+        0 8px 25px rgba(100, 55, 255, 0.35),
+        0 0 20px rgba(160, 55, 255, 0.18);
+}
+
+
+.operator:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #e15aff,
+            #764cff 55%,
+            #315bff
+        );
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.3),
+        0 12px 30px rgba(100, 55, 255, 0.45),
+        0 0 25px rgba(160, 55, 255, 0.3);
+}
+
+
+/* ========================================
+   EQUAL BUTTON
+======================================== */
+
+.equals {
+    grid-row: span 2;
+
+    height: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dc46ff 0%,
+            #743cff 48%,
+            #285cff 100%
+        );
+
+    border-color: rgba(210, 160, 255, 0.65);
+
+    font-size: 34px;
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.3),
+        0 10px 30px rgba(95, 55, 255, 0.4),
+        0 0 25px rgba(140, 60, 255, 0.25);
+}
+
+
+.equals:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #ed59ff 0%,
+            #814dff 48%,
+            #356bff 100%
+        );
+
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.35),
+        0 14px 35px rgba(95, 55, 255, 0.5),
+        0 0 30px rgba(140, 60, 255, 0.35);
+}
+
+
+/* ========================================
+   ZERO BUTTON
+======================================== */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* ========================================
+   DECIMAL
+======================================== */
+
+.decimal {
+    font-size: 30px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+
+    .calculator {
+        width: 500px;
+    }
+
+    .button {
+        height: 70px;
+    }
+
+    .display {
+        min-height: 155px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 520px) {
+
+    body {
+        min-height: 100svh;
+        padding: 12px;
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 420px;
+
+        padding: 5px;
+
+        border-radius: 30px;
+    }
+
+    .calculator-header {
+        height: 58px;
+    }
+
+    .window-controls {
+        left: 16px;
+
+        gap: 7px;
+    }
+
+    .control {
+        width: 11px;
+        height: 11px;
+    }
+
+    .calculator-title {
+        font-size: 12px;
+    }
+
+    .menu-button {
+        right: 15px;
+        font-size: 22px;
+    }
+
+    .display {
+        margin: 14px 14px 15px;
+
+        min-height: 135px;
+
+        padding: 20px;
+    }
+
+    .expression {
+        font-size: 15px;
+    }
+
+    .result {
+        font-size: 43px;
+    }
+
+    .buttons {
+        gap: 9px;
+
+        padding:
+            0 14px 16px;
+    }
+
+    .button {
+        height: 62px;
+
+        border-radius: 14px;
+
+        font-size: 22px;
+    }
+
+    .equals {
+        font-size: 28px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 360px) {
+
+    .display {
+        min-height: 120px;
+
+        padding: 16px;
+    }
+
+    .result {
+        font-size: 36px;
+    }
+
+    .button {
+        height: 55px;
+
+        font-size: 19px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+}

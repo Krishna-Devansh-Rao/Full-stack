@@ -1,0 +1,31 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#000;color:#fff}
+.header{height:70px;background:#000;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.logo{font-size:35px;color:#1db954}
+.search{display:flex;align-items:center;background:#222;padding:12px 18px;border-radius:30px;width:420px}
+.search input{flex:1;background:none;border:none;outline:none;color:#fff;margin-left:10px}
+.top-links{display:flex;align-items:center;gap:20px}
+.top-links a{text-decoration:none;color:#b3b3b3}
+.top-links button{padding:12px 25px;border:none;border-radius:30px;font-weight:bold}
+.main{display:flex;gap:8px;padding:8px}
+.sidebar{width:320px}
+.nav-box,.library{background:#121212;border-radius:12px;padding:18px}
+.nav-box{margin-bottom:8px}
+.nav-box a{display:flex;gap:15px;color:#fff;text-decoration:none;padding:12px 0;font-weight:bold}
+.library-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.card{background:#242424;padding:18px;border-radius:10px;margin-bottom:15px}
+.card h4{margin-bottom:10px}
+.card p{margin-bottom:15px;color:#d1d1d1}
+.card button{padding:10px 18px;border:none;border-radius:25px;font-weight:bold}
+.content{flex:1;background:#121212;border-radius:12px;padding:25px;overflow:auto}
+.section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.section-header a{text-decoration:none;color:#b3b3b3}
+.songs,.artists{display:flex;gap:20px;overflow:auto}
+.song,.artist{width:180px;padding:12px;border-radius:10px}
+.song:hover,.artist:hover{background:#242424}
+.song img{width:100%;border-radius:10px}
+.artist img{width:100%;border-radius:50%}
+.song h4,.artist h4{margin-top:10px}
+.song p{color:#b3b3b3;margin-top:5px}
+.second{margin-top:45px}
+.player{height:70px;background:#181818;border-top:1px solid #333;display:flex;align-items:center;justify-content:center}

@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-family: Arial, sans-serif; 
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(103, 76, 255, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #211744,
+            #3b285b,
+            #bd9190
+        );
+    transition: 0.3s;
+}
+
+/* Calculator */
+
+.calculator {
+    width: 420px;
+    padding: 26px;  
+    border-radius: 32px;    
+    background: rgba(20, 24, 52, 0.85); 
+    border: 1px solid rgba(255, 255, 255, 0.12);    
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(112, 78, 255, 0.18);  
+    backdrop-filter: blur(20px);
+}
+
+/* Top buttons */
+
+.top {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.top button {
+    border: none;
+    background: transparent;    
+    color: #bfc2d8; 
+    font-size: 24px;    
+    cursor: pointer;    
+    transition: 0.2s;
+}
+
+.top button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Display */
+
+.display {
+    height: 115px;  
+    margin-bottom: 20px;
+    padding: 18px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;  
+    border-radius: 22px;    
+    background: #080b1c;    
+    overflow: hidden;
+}
+
+#history {
+    width: 100%;    
+    min-height: 24px;   
+    color: #777b96; 
+    font-size: 16px;    
+    text-align: right;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#display {
+    width: 100%;    
+    color: #f5f5ff; 
+    font-size: 44px;
+    font-weight: 500;   
+    text-align: right;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Buttons */
+
+.buttons {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 12px;
+}
+
+.btn {
+    height: 67px;
+    border: none;
+    border-radius: 17px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(
+        145deg,
+        #3c4667,
+        #29304b
+    );
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.25),
+        inset 0 1px rgba(255, 255, 255, 0.08);
+
+    transition: 0.15s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        145deg,
+        #485273,
+        #323b58
+    );
+}
+
+.btn:active {
+    transform: scale(0.94);
+}
+
+/* Operators */
+
+.operator {
+    background: linear-gradient(
+        145deg,
+        #8c69ff,
+        #6948dd
+    );
+
+    box-shadow:
+        0 8px 18px rgba(102, 69, 220, 0.35);
+}
+
+.operator:hover {
+    background: linear-gradient(
+        145deg,
+        #9878ff,
+        #7653ed
+    );
+}
+
+/* Light mode */
+
+body.light {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(120, 90, 255, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #d8d1ff,
+            #eee6ff,
+            #f4cccc
+        );
+}
+
+body.light .calculator {
+    background: rgba(255, 255, 255, 0.65);
+
+    box-shadow:
+        0 25px 70px rgba(50, 40, 80, 0.25);
+}
+
+body.light .display {
+    background: #f3f3f9;
+}
+
+body.light #display {
+    color: #17182b;
+}
+
+body.light #history {
+    color: #777;
+}
+
+body.light .btn {
+    color: #22243a;
+
+    background: linear-gradient(
+        145deg,
+        #e9eaf4,
+        #d9dbea
+    );
+}
+
+body.light .operator {
+    color: white;
+
+    background: linear-gradient(
+        145deg,
+        #8c69ff,
+        #6948dd
+    );
+}
+
+body.light .top button {
+    color: #33354a;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .calculator {
+        width: 100%;
+        max-width: 420px;
+
+        padding: 20px;
+    }
+
+    .btn {
+        height: 62px;
+    }
+
+    #display {
+        font-size: 40px;
+    }
+}

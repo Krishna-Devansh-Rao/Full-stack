@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+
+        <div class="top">
+            <button id="themeBtn">☼</button>
+            <button id="menuBtn">•••</button>
+        </div>
+
+        <div class="display">
+            <div id="history"></div>
+            <div id="display">0</div>
+        </div>
+
+        <div class="buttons">
+
+            <button class="btn action" data-action="clear">AC</button>
+            <button class="btn action" data-action="sign">+/-</button>
+            <button class="btn action" data-action="percent">%</button>
+            <button class="btn operator" data-operator="÷">÷</button>
+
+            <button class="btn number">7</button>
+            <button class="btn number">8</button>
+            <button class="btn number">9</button>
+            <button class="btn operator" data-operator="×">×</button>
+
+            <button class="btn number">4</button>
+            <button class="btn number">5</button>
+            <button class="btn number">6</button>
+            <button class="btn operator" data-operator="-">−</button>
+
+            <button class="btn number">1</button>
+            <button class="btn number">2</button>
+            <button class="btn number">3</button>
+            <button class="btn operator" data-operator="+">+</button>
+
+            <button class="btn number">0</button>
+            <button class="btn number">.</button>
+            <button class="btn action" data-action="delete">⌫</button>
+            <button class="btn operator" data-action="equals">=</button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
